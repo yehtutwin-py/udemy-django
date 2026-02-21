@@ -1,0 +1,36 @@
+/* Display row on desktop and column on mobile */
+/* .cards-container{
+    display: flex;
+    flex-direction: column;
+}
+@media (min-width: 768px){
+    .cards-container{
+        flex-direction: row;
+    }
+} */
+
+/* Disply 2 row on mobile and 4 on desktop */
+.cards-container{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+.menu{
+    display: none;
+}
+img{
+    width: 100%;
+}
+@media (min-width: 768px){
+    .cards-container{
+        grid-template-columns: repeat(4, 1fr);
+    }
+    .menu{
+        display: flex;
+    }
+    img{
+        width: 400px;
+    }
+}
+@media (orientation: landscape){
+    background-color: cyan;
+}
